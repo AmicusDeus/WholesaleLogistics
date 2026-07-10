@@ -1,0 +1,42 @@
+﻿<Publish>
+	<!--Id must be set in order to update existed mod. it is not required for publishing mod for the first time-->
+	<ModId Value="150547" />
+	<!--Name of the mod to display to players-->
+	<DisplayName Value="WholesaleLogistics" />
+	<!--Short description of the mod-->
+	<ShortDescription Value="Supply commercial shops from your own city warehouses instead of every shop importing on its own." />
+	<!--Long description of the mod. Single line or multi line. Supports minimal markdown subset-->
+	<LongDescription>
+Turns your warehouses and cargo yards into a real distribution layer. It unlocks every physical, tradable good for storage (food, furniture, electronics and the rest — you still choose per building what each warehouse stocks), then supplies commercial shops from that local stock instead of each shop driving out to industry or importing on its own.
+
+Master switch:
+- ON: shops are supplied from city warehouses (push). Warehouses import in bulk; individual shops don't. No warehouse capacity for a needed good means shops run short until you build it ("no building, no service").
+- OFF (default per building): pure vanilla pull — shops fall back to buying from industry / imports.
+
+Warehouse-owned delivery trucks now physically haul goods from your warehouses to the shops that need them, using the game's own delivery system. Alpha software: reverting the storage unlock takes effect after a game restart.
+	</LongDescription>
+	<!--Thumbnail-->
+	<Thumbnail Value="Properties/Thumbnail.png" />
+	<!--Screenshot, can be set multiple times-->
+	<Screenshot Value="" />
+	<!--Tag, can be set multiple times-->
+	<Tag Value="" />
+	<!--Link to the forum post where the mod can be discussed-->
+	<ForumLink Value="" />
+	<!--Version of the mod-->
+	<ModVersion Value="1.0" />
+	<!--Recommended version of the base game to use the mod-->
+	<GameVersion Value="1.6.*" />
+	<!--Dependency for the mod, can be set multiple times-->
+	<Dependency Id="" />
+	<!--Required DLC, can be set multiple times. Supported values are "Landmark Buildings", "San Fransisco Set", "Beach Properties", "Urban Promenades", "Modern Architecture"-->
+	<RequiredDLC Value="" />
+	<!--Change log for new version. Single line or multi line. Supports minimal markdown subset-->
+	<ChangeLog Value="Initial public release." />
+	<!--<ChangeLog>
+	</ChangeLog>-->
+	<!--External link, can be set multiple times. supported types are "discord", "github", "youtube", "twitch", "x", "paypal", "patreon", "buymeacoffee", "kofi", "crowdin", "gitlab", "gofundme"-->
+	<ExternalLink Type="" Url="" />
+	<!--Supported values Public, Private, Unlisted-->
+	<AccessLevel Value="Public" />
+</Publish>
