@@ -14,6 +14,10 @@ Master switch:
 - OFF (default per building): pure vanilla pull — shops fall back to buying from industry / imports.
 
 Warehouse-owned delivery trucks now physically haul goods from your warehouses to the shops that need them, using the game's own delivery system. Alpha software: reverting the storage unlock takes effect after a game restart.
+
+Source (open source, MIT): https://github.com/AmicusDeus/WholesaleLogistics
+
+Made with Claude Code, Anthropic's agentic coding tool.
 	</LongDescription>
 	<!--Thumbnail-->
 	<Thumbnail Value="Properties/Thumbnail.png" />
@@ -36,7 +40,7 @@ Warehouse-owned delivery trucks now physically haul goods from your warehouses t
 	<!--<ChangeLog>
 	</ChangeLog>-->
 	<!--External link, can be set multiple times. supported types are "discord", "github", "youtube", "twitch", "x", "paypal", "patreon", "buymeacoffee", "kofi", "crowdin", "gitlab", "gofundme"-->
-	<ExternalLink Type="" Url="" />
+	<ExternalLink Type="github" Url="https://github.com/AmicusDeus/WholesaleLogistics" />
 	<!--Supported values Public, Private, Unlisted-->
 	<AccessLevel Value="Public" />
 </Publish>
