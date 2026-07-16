@@ -17,7 +17,7 @@ Warehouse-owned delivery trucks now physically haul goods from your warehouses t
 
 Source (open source, MIT): https://github.com/AmicusDeus/WholesaleLogistics
 
-Made with Claude Code, Anthropic's agentic coding tool.
+Made with Claude Code's Opus 4.8 and Fable 5 models.
 	</LongDescription>
 	<!--Thumbnail-->
 	<Thumbnail Value="Properties/Thumbnail.png" />
