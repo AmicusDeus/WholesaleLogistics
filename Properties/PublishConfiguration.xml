@@ -28,7 +28,7 @@ Made with Claude Code's Opus 4.8 and Fable 5 models.
 	<!--Link to the forum post where the mod can be discussed-->
 	<ForumLink Value="" />
 	<!--Version of the mod-->
-	<ModVersion Value="1.01" />
+	<ModVersion Value="1.02" />
 	<!--Recommended version of the base game to use the mod-->
 	<GameVersion Value="1.6.*" />
 	<!--Dependency for the mod, can be set multiple times-->
@@ -36,7 +36,7 @@ Made with Claude Code's Opus 4.8 and Fable 5 models.
 	<!--Required DLC, can be set multiple times. Supported values are "Landmark Buildings", "San Fransisco Set", "Beach Properties", "Urban Promenades", "Modern Architecture"-->
 	<RequiredDLC Value="" />
 	<!--Change log for new version. Single line or multi line. Supports minimal markdown subset-->
-	<ChangeLog Value="Added a &quot;Keep achievements enabled&quot; toggle (new General section) — it re-enables Cities: Skylines II achievements while the mod is active. On by default; no other changes." />
+	<ChangeLog Value="Settings now save to disk the moment you change them, so your options survive a crash or a non-clean exit — not only a clean Quit-to-Desktop." />
 	<!--<ChangeLog>
 	</ChangeLog>-->
 	<!--External link, can be set multiple times. supported types are "discord", "github", "youtube", "twitch", "x", "paypal", "patreon", "buymeacoffee", "kofi", "crowdin", "gitlab", "gofundme"-->

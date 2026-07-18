@@ -22,6 +22,8 @@ namespace WholesaleLogistics
             ActiveSetting.RegisterInOptionsUI();
             GameManager.instance.localizationManager.AddSource("en-US", new LocaleEn(ActiveSetting));
             AssetDatabase.global.LoadSettings(nameof(WholesaleLogistics), ActiveSetting, new Setting(this));
+            // Persist every settings change to disk the moment it is applied (survives a crash / non-clean exit).
+            ActiveSetting.onSettingsApplied += OnSettingsApplied;
 
             // Intercept fresh shop purchase requests BEFORE the vanilla buyer system consumes them.
             updateSystem.UpdateBefore<WholesaleBuyerSystem, ResourceBuyerSystem>(SystemUpdatePhase.GameSimulation);
@@ -35,11 +37,23 @@ namespace WholesaleLogistics
             log.Info("[SelfTest] WholesaleLogistics loaded (demand-driven distribution).");
         }
 
+        // Persist a settings change to disk as soon as it is applied (guard: ApplyAndSave re-raises onSettingsApplied).
+        private static bool s_savingReentrant;
+        private static void OnSettingsApplied(Game.Settings.Setting setting)
+        {
+            if (s_savingReentrant)
+                return;
+            s_savingReentrant = true;
+            try { ActiveSetting?.ApplyAndSave(); }
+            finally { s_savingReentrant = false; }
+        }
+
         public void OnDispose()
         {
             log.Info(nameof(OnDispose));
             if (ActiveSetting != null)
             {
+                ActiveSetting.onSettingsApplied -= OnSettingsApplied;
                 ActiveSetting.UnregisterInOptionsUI();
                 ActiveSetting = null;
             }
