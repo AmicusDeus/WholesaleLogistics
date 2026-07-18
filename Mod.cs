@@ -29,6 +29,8 @@ namespace WholesaleLogistics
             updateSystem.UpdateAt<WholesaleDispatchSystem>(SystemUpdatePhase.GameSimulation);
             // Let warehouses stock commercial goods (widens storage prefab masks; player still picks per building).
             updateSystem.UpdateAt<WarehouseStockSystem>(SystemUpdatePhase.GameSimulation);
+            // Keep platform achievements enabled while the mod is active.
+            updateSystem.UpdateAt<AchievementEnablerSystem>(SystemUpdatePhase.GameSimulation);
 
             log.Info("[SelfTest] WholesaleLogistics loaded (demand-driven distribution).");
         }
@@ -65,6 +67,10 @@ namespace WholesaleLogistics
                 { m_S.GetOptionDescLocaleID(nameof(Setting.WarehouseImportsOnly)), "Reserved for the truck-dispatch stage: shops never import directly; only warehouses import, in bulk." },
                 { m_S.GetOptionLabelLocaleID(nameof(Setting.WidenWarehouseStock)), "Warehouses can stock commercial goods" },
                 { m_S.GetOptionDescLocaleID(nameof(Setting.WidenWarehouseStock)), "Adds every physical tradable good (food, furniture, electronics, ...) to the resources warehouses and cargo yards may store. You still choose per building what each one stores. Turning this off takes effect after restarting the game." },
+
+                { m_S.GetOptionGroupLocaleID(Setting.GroupGeneral), "General" },
+                { m_S.GetOptionLabelLocaleID(nameof(Setting.EnableAchievements)), "Keep achievements enabled" },
+                { m_S.GetOptionDescLocaleID(nameof(Setting.EnableAchievements)), "Cities: Skylines II disables achievements whenever any mod is active. This re-enables them. Safe to leave on." },
             };
         }
 

@@ -9,6 +9,7 @@ namespace WholesaleLogistics
     {
         public const string Section = "Main";
         public const string Group = "Wholesale";
+        public const string GroupGeneral = "General";
 
         public Setting(IMod mod) : base(mod) { }
 
@@ -34,12 +35,17 @@ namespace WholesaleLogistics
         [SettingsUISection(Section, Group)]
         public bool WidenWarehouseStock { get; set; } = true;
 
+        // Keep platform achievements enabled while this mod is active (the game otherwise disables them for any mod).
+        [SettingsUISection(Section, GroupGeneral)]
+        public bool EnableAchievements { get; set; } = true;
+
         public override void SetDefaults()
         {
             Enabled = true;
             StrictMode = false;
             WarehouseImportsOnly = true;
             WidenWarehouseStock = true;
+            EnableAchievements = true;
         }
     }
 }
