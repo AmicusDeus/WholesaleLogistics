@@ -2,7 +2,7 @@
 
 Turns your warehouses into a real distribution layer: they stock goods and dispatch delivery trucks to the shops that need them, instead of every shop importing on its own. For **Cities: Skylines II**.
 
-**Paradox Mods:** https://mods.paradoxplaza.com/mods/150547
+**Paradox Mods:** https://mods.paradoxplaza.com/mods/150547/Windows
 
 ## What it does
 - Unlocks every physical, tradable good for storage in your warehouses (you still choose per building what each stocks).
